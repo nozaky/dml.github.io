@@ -25,5 +25,5 @@ $lang = array(
     "email" => "Email",
     //seccion => habilidades
     "habilidades" => "Habilidades",
-    "habilidades_p1" => "En la siguiente tabla se pueden ver mis habilidades a lo largo de 5 años de experiencia.",
+    "habilidades_p1" => "En la siguiente tabla se pueden ver mis habilidades a lo largo de 5 años de experiencia."
 );
