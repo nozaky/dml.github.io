@@ -20,6 +20,6 @@ $lang = array(
     "v_estudios" => "Higher Technician",
     "email" => "Email",
     "habilidades" => "Skills",
-    "habilidades_p1" => "In the following table you can see my skills over 5 years of experience.",
-    
+    "habilidades_p1" => "In the following table you can see my skills over 5 years of experience."
+
 );
