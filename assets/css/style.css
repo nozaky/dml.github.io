@@ -390,11 +390,19 @@ section {
   background: #dce8f8;
   height: 10px;
 }
+
 .skills .progress-bar {
   width: 1px;
   height: 10px;
   transition: 0.9s;
   background-color: #149ddd;
+}
+
+.skills .progress-language {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #4FF93E;
 }
 
 /*--------------------------------------------------------------

@@ -154,6 +154,10 @@
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
         });
+        let prLanguages = select('.progress .progress-language', true);
+        prLanguages.forEach((el) => {
+          el.style.width = el.getAttribute('aria-valuenow') + '%'
+        });
       }
     })
   }
