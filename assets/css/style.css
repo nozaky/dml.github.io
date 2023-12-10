@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 400px;
+  width: 20%;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 240px;
   border: 8px solid #2c2f3f;
 }
 #header .profile h1 {
@@ -113,12 +113,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main {
-  margin-left: 300px;
+  margin-left: 20%;
 }
 
 @media (max-width: 1199px) {
   #header {
-    left: -300px;
+    left: -20%;
   }
 
   #main {
@@ -190,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-nav-active #header {
   left: 0;
+  width: 60%;
 }
 
 /*--------------------------------------------------------------
