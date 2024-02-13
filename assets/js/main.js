@@ -272,3 +272,4 @@ function calcularEdad(fecha) {
 }
 
 document.querySelector("#edad").textContent = calcularEdad("09/10/1995");
+document.querySelector("#exp").textContent = calcularEdad("01/03/2017");
