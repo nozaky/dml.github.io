@@ -46,6 +46,15 @@
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
+    const isPageBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 2)
+
+    if (isPageBottom && navbarlinks.length) {
+      navbarlinks.forEach((link, index) => {
+        link.classList.toggle('active', index === navbarlinks.length - 1)
+      })
+      return
+    }
+
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
@@ -94,6 +103,15 @@
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
+  })
+
+  on('keydown', '.mobile-nav-toggle', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      select('body').classList.toggle('mobile-nav-active')
+      this.classList.toggle('bi-list')
+      this.classList.toggle('bi-x')
+    }
   })
 
   /**
@@ -258,9 +276,9 @@
   });
 
 })()
-function calcularEdad(fecha) {
+function calcularEdad(fechaISO) {
   var hoy = new Date();
-  var cumpleanos = new Date(fecha);
+  var cumpleanos = new Date(fechaISO + "T00:00:00");
   var edad = hoy.getFullYear() - cumpleanos.getFullYear();
   var m = hoy.getMonth() - cumpleanos.getMonth();
 
@@ -271,5 +289,12 @@ function calcularEdad(fecha) {
   return edad;
 }
 
-document.querySelector("#edad").textContent = calcularEdad("09/10/1995");
-document.querySelector("#exp").textContent = calcularEdad("01/03/2017");
+var edadEl = document.querySelector("#edad");
+if (edadEl) {
+  edadEl.textContent = calcularEdad("1995-10-09");
+}
+
+var expYears = calcularEdad("2017-03-01");
+document.querySelectorAll(".exp-years").forEach(function (el) {
+  el.textContent = expYears;
+});
